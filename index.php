@@ -36,7 +36,7 @@ class MilkDecorator extends CoffeeDecorator {
     }
 }
 
-// Concrete Decorator - Ajoute du sucre
+//  - Ajoute du sucre
 class SugarDecorator extends CoffeeDecorator {
     public function cost() {
         return $this->coffee->cost() + 2; // Ajoute 2 au coût pour le sucre

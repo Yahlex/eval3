@@ -34,13 +34,13 @@ Pour exécuter la démo, suivez ces étapes :
 
 Les avantages que procure le fait de programmer vers une interface et non directement vers une implémentation sont : 
 
-- La flexibilité, car cela permet au client de manipuler les mêmes méthodes en obtenant des comportements différents selon les besoins.
+- La flexibilité, car cela permet au client de manipuler les mêmes interfaces (donc méthodes) en obtenant des comportements différents selon les besoins de l'utilisateur.
 
 - L’extensibilité, car cela permet d’introduire de nouvelles implémentations de l’interface sans modifier le code existant. Cela facilite l’ajout de nouvelles fonctionnalités ou même la modification du comportement sans avoir d’impact sur le reste du système.
 
 ### 2
 
-Préférer la composition à l'héritage est généralement recommandé pour une plus grande flexibilité. La composition, basée sur la relation “a-un”, permet des modifications de comportement à l'exécution, offrant une adaptabilité dynamique. 
+Préférer la composition (ou agrégation) à l'héritage est généralement recommandé pour une plus grande *flexibilité*. La composition, basée sur la relation “a-un”, permet des modifications de comportement à l'exécution, offrant une adaptabilité dynamique.
 En revanche, l'héritage (relation “est-un” ou “se comporte comme”) nécessite des modifications avant exécution, générant un couplage fort et des changements complexes. 
 
 La composition maintient l'encapsulation avec une visibilité "Black box", évitant les détails internes partagés, tandis que l'héritage expose l'interface et l'implémentation, entraînant une visibilité "White box" et une encapsulation brisée.
@@ -52,11 +52,11 @@ En programmation orientée objet, une interface est comme un contrat définissan
 
 ## Veille et présentation du design pattern "DECORATOR"
 
-Le décorateur est un patron de conception structurel qui permet d’affecter dynamiquement de nouveaux comportements à des objets en les plaçant dans des emballeurs qui implémentent ces comportements.
+Le décorateur est un patron de conception *structurel* qui permet d’affecter dynamiquement de nouveaux comportements à des objets en les plaçant dans des emballeurs qui implémentent ces comportements.
 
 ### Contexte 
 
-Le design pattern "Decorator" est utilisé dans ce projet pour modéliser différentes variations de café. En effet, selon l'action du client, selon si il prend différents type de café, il doit récupérer une décoration selon l'objet demandé. Par exemple le café simple est le composant de base, et les décorateurs ajoutent des fonctionnalités supplémentaires, telles que du lait ou du sucre, pour créer des combinaisons variées.
+Le design pattern "Decorator" est utilisé dans ce projet pour modéliser différentes variations de café. En effet, selon l'action du client, par exemple au Starbucks, sur la machine de commande selon si il prend différents type de café, il doit récupérer une décoration selon l'objet demandé. Par exemple le café simple est le composant de base, et les décorateurs ajoutent des fonctionnalités supplémentaires, telles que du lait ou du sucre, pour créer des combinaisons variées.
 
 ### Avantages et inconvénients
 
@@ -87,3 +87,4 @@ Le code source est disponible dans le fichier [index.php](index.php).
 
 ### Diagramme de classes UML
 
+![Diagramme de classes UML](uml.png)
