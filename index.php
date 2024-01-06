@@ -1,18 +1,22 @@
 <?php
 
-// Interface Component
+// L'Interface du composant (L’interface du composant définit les traitements qui peuvent être modifiés par les décorateurs.)
+
 interface Coffee {
     public function cost();
 }
 
-// Concrete Component
+// Composant concret (Les composants concrets fournissent des implémentations par défaut pour les traitements.)
+
 class SimpleCoffee implements Coffee {
     public function cost() {
         return 10; // Coût d'un café simple
     }
 }
 
-// Decorator
+// Decorateur de base (La classe de base du décorateur implémente la même interface  que les autres composants. Le but principal de cette classe  est de définir l’interface d’emballage pour tous les
+// décorateurs concrets.)
+
 abstract class CoffeeDecorator implements Coffee {
     protected $coffee;
 
@@ -25,7 +29,7 @@ abstract class CoffeeDecorator implements Coffee {
     }
 }
 
-// Concrete Decorator - Ajoute du lait
+// Concrete Decorator - Ajoute du lait (on emballe l'objet dans un décorateur spécifique)
 class MilkDecorator extends CoffeeDecorator {
     public function cost() {
         return $this->coffee->cost() + 5; // Ajoute 5 au coût pour le lait
