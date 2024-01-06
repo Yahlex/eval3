@@ -81,8 +81,6 @@ Le design pattern "Decorator" est utilisé dans ce projet pour modéliser diffé
 
 ### Implémenter le design pattern 
 
-![Design Pattern : Le Décorateur (PHP)](index.php)
-
 Le code source est disponible dans le fichier [index.php](index.php).
 
 ### Diagramme de classes UML
